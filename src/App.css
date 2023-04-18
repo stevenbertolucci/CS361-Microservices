@@ -3,7 +3,23 @@
 }
 
 .App-body {
+  width: 150%;
   margin-top: -30ch;
+  margin-left: -8.5ch;
+  border: solid;
+  border-color: black;
+  border-width: thin;
+  background-color: white;
+}
+
+.App-body2 {
+  width: 130%;
+  margin-top: 2ch;
+  margin-left: -6ch;
+  border: solid;
+  border-color: black;
+  border-width: thin;
+  background-color: white;
 }
 
 .App-p {
@@ -56,10 +72,10 @@
 
 .App-nav a {
   padding: 22px;
-  display: block;
   font-size: medium;
   height: auto;
-  margin-left: -140ch;
+  width: 45%;
+  margin-left: 20px;
 }
 
 .App-nav a:hover {
