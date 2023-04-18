@@ -5,4 +5,5 @@ Santa Claus Logistic Inc. needs a website that can keep track of packages and sh
 
 # About Me
 Author: Steven Bertolucci
-/n Course: CS361 - Fundamental of Software Engineering
+#
+Course: CS361 - Fundamental of Software Engineering
