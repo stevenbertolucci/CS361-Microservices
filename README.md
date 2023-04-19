@@ -1,7 +1,7 @@
 # A Web Based App that Utilizes Microservices
 
 Description:
-Santa Claus Logistic Inc. needs a website that can keep track of packages and shipping cost for every zip code. HO HO HO!
+The directory is a web based app that generates users on the click of a button and lists their information. Then we can take their zipcode and paste it in Zip Code locator to find their exact whereabouts. 
 
 # 
 Author: Steven Bertolucci
