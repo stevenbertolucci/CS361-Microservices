@@ -12,7 +12,7 @@ function ShippingCost() {
         </body>
         <br />
         <body className="App-body2">
-            <p className='App-p'>Type in the Zip Code of the City you want to ship to.</p>
+            <p className='App-p'>Type in the zip Code of a U.S. city you want to ship to.</p>
             <ShippingTextBox />
         </body>
         </div>
