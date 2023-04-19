@@ -5,7 +5,7 @@ function HomePage() {
     return (
         <div>
         <body className='App-body'>
-            <h2>Welcome to Santa Claus Logistics!</h2>
+            <h2>Welcome to the Directory!</h2>
             <Navigation />
             <br />
         </body>

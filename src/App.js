@@ -1,10 +1,10 @@
 import './App.css';
 import React from 'react';
 import HomePage from './pages/HomePage';
-import TrackingNumber from './pages/TrackingNumber';
 import Help from './pages/Help';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import ShippingCost from './pages/ShippingCost';
+import ZipCodeLocator from './pages/ZipCodeLocator';
+import UserInfo from './pages/UserInfo';
 
 function App() {
   return (
@@ -13,8 +13,8 @@ function App() {
         <Router>
           <Routes>
             <Route path="/" element = {<HomePage />}></Route>
-            <Route path="/tracking-number" element = {<TrackingNumber />}></Route>
-            <Route path="/shipping-cost" element = {<ShippingCost />}></Route>
+            <Route path="/users" element = {<UserInfo />}></Route>
+            <Route path="/zip-code-locator" element = {<ZipCodeLocator />}></Route>
             <Route path="/help" element = {<Help />}></Route>
           </Routes>
         </Router>
