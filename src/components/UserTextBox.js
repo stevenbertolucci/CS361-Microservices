@@ -15,6 +15,7 @@ function TextBox() {
 
     const handleChange = (event) => {
         setFirstName(event.target.value);
+        
     };
 
     const handleChange1 = (event) => {
@@ -39,7 +40,7 @@ function TextBox() {
         let c = address;
         let d = city;
         let e = zipcode;
-        if (a === "" || b === "" || c === "" || d=== "" || e==="") {
+        if (a === "" || b === "" || c === "" || d === "" || e ==="") {
             alert("Entire form must be filled out");
             event.preventDefault();
             return false;
@@ -62,7 +63,6 @@ function TextBox() {
         cell3.innerHTML = JSON.stringify(updateAddress)
         cell4.innerHTML = JSON.stringify(updateCity)
         cell5.innerHTML = JSON.stringify(updateZipcode)
-        //alert("The city is: " + JSON.stringify(mycity));
         event.preventDefault();
     };
 
