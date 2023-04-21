@@ -115,8 +115,8 @@ function TextBox() {
             
             <table className='App-table' id = "myTable">
                 <tr>
-                    <th>FName</th>
-                    <th>LName</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
                     <th>Address</th>
                     <th>City</th>
                     <th>Zipcode</th>
