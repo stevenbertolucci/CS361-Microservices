@@ -3,13 +3,11 @@ import Navigation from '../components/Navigation';
 
 function HomePage() {
     return (
-        <div>
-        <body className='App-body'>
-            <h2>Welcome to the Directory!</h2>
+        <body>
+            <h2 className='App-center'>Welcome to the Directory!</h2>
             <Navigation />
             <br />
         </body>
-        </div>
     )
 }
 

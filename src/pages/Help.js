@@ -6,9 +6,9 @@ function Help() {
     return (
         <div>
         <body className='App-body'>
+            <h2 className='App-center'>Questions with our Web App?</h2>
             <Navigation />
-            <h2>Questions with our Web App?</h2>
-            <p className='App-p'>Please refer to this page to guide you when using Santa Claus Logistics Web App.</p>
+            <p className='App-p'>Please refer to this page to guide you when using The Directory Web App.</p>
         </body>
         <body>
             <FAQ />

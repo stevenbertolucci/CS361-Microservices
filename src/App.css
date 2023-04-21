@@ -10,16 +10,39 @@
   border-color: black;
   border-width: thin;
   background-color: white;
+  overflow-y: auto;
+}
+
+.App-center {
+  text-align: center;
+  background-color: aqua;
+  padding: 10px;
+  border-style: solid;
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
 }
 
 .App-body2 {
-  width: 130%;
+  width: 40%;
   margin-top: 2ch;
-  margin-left: -6ch;
-  border: solid;
-  border-color: black;
-  border-width: thin;
-  background-color: white;
+  margin-left: -3ch;
+  border-style: solid;
+  position: fixed;
+  overflow-y: auto;
+}
+
+.App-red {
+  color: red;
+}
+
+.App-body3 {
+  width: 40%;
+  margin-top: 2ch;
+  margin-left: -3ch;
+  border-style: solid;
+  position: fixed;
 }
 
 .App-p {
@@ -34,6 +57,20 @@
   text-align: center;
   width: 100%;
   margin-bottom: 50px;
+}
+
+.App-div {
+  overflow-y: auto;
+}
+
+.App-table, th, td {
+  border: 1px solid black;
+  align-content: center;
+  padding: 6px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  position: sticky;
 }
 
 .App-a {
@@ -68,6 +105,7 @@
 .App-label {
   font-size: large;
   font-weight: bolder;
+  flex-wrap: wrap;
 }
 
 .App-nav a {
@@ -76,6 +114,7 @@
   height: auto;
   width: 45%;
   margin-left: 20px;
+  position: static;
 }
 
 .App-nav a:hover {
