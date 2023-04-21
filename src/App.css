@@ -48,7 +48,7 @@
 
 .App-body3 {
   width: 800px;
-  margin: auto;
+  margin-left: -25px;
   border-style: solid;
   position: fixed;
 }
