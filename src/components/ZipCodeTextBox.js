@@ -43,6 +43,10 @@ function TextBox() {
             City: {JSON.stringify(updateZipcode.city)}
             <br />
             State: {JSON.stringify(updateZipcode.state)}
+            <br />
+            Longitudinal: {JSON.stringify(updateZipcode.longitude)}
+            <br />
+            Latitudinal: {JSON.stringify(updateZipcode.latitude)}
             </p>
             </div>
     
