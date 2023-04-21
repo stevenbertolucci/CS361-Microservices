@@ -1,5 +1,5 @@
 import './App.css';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import HomePage from './pages/HomePage';
 import Help from './pages/Help';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
@@ -7,6 +7,20 @@ import ZipCodeLocator from './pages/ZipCodeLocator';
 import UserInfo from './pages/UserInfo';
 
 function App() {
+  const [theme, setTheme] = useState('light');
+    const toggleTheme = () => {
+    if (theme === 'light') {
+        setTheme('dark');
+    } 
+    else {
+        setTheme('light');
+    }
+};
+
+  useEffect(() => {
+      document.body.className = theme;
+  }, [theme]);
+  
   return (
     <div className="App">
       <header className="App-header">
