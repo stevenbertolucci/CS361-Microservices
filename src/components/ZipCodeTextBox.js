@@ -10,7 +10,17 @@ function TextBox() {
     };
 
     const handleClick = (event) => {
+        if (zipcode === "") {
+            alert("Zip Code must be filled out");
+            return false;
+        }
         let mycity = cities.zip_lookup(`${zipcode}`)
+
+        if (mycity === undefined) {
+            alert("Zip Code does not exist. Please input a valid zipcode. Thank you for understanding.")
+            event.preventDefault()
+            return false;
+        }
         setUpdate(mycity);
         //alert("The city is: " + JSON.stringify(mycity));
         event.preventDefault();
@@ -18,8 +28,8 @@ function TextBox() {
 
     return (
         <div>
-            <form>
-                <label className='App-label' for ="tracking">Zip Code: </label>
+            <form name="myForm">
+                <label className='App-label' for ="zipcode">Zip Code: </label>
                 <input 
                     className='App-input' 
                     type="text" 

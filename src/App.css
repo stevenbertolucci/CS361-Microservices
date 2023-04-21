@@ -8,9 +8,9 @@
   margin-left: -8.5ch;
   border: solid;
   border-color: black;
-  border-width: thin;
   background-color: white;
   overflow-y: auto;
+  text-align: center;
 }
 
 .App-center {
@@ -25,12 +25,21 @@
 }
 
 .App-body2 {
-  width: 40%;
-  margin-top: 2ch;
-  margin-left: -3ch;
+  width: 1000px;
+  margin-left: -120px;
   border-style: solid;
   position: fixed;
-  overflow-y: auto;
+  overflow: auto;
+}
+
+.App-ul {
+  list-style-type: none;
+}
+
+.App-labelAlign {
+  display: inline-block;
+  width: 100px;
+  text-align: left;
 }
 
 .App-red {
@@ -38,9 +47,8 @@
 }
 
 .App-body3 {
-  width: 40%;
-  margin-top: 2ch;
-  margin-left: -3ch;
+  width: 800px;
+  margin: auto;
   border-style: solid;
   position: fixed;
 }
@@ -106,6 +114,10 @@
   font-size: large;
   font-weight: bolder;
   flex-wrap: wrap;
+  display: inline-block;
+  width: 100px;
+  text-align: left;
+  margin: 0px;
 }
 
 .App-nav a {

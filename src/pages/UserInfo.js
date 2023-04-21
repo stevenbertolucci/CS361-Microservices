@@ -13,7 +13,7 @@ function UserInfo() {
         </body>
         <br />
         <body className='App-body2'>
-            <p className='App-p'>Please use the text field to look up a user: </p>
+            <p className='App-p'>Please use the text field to log a user: </p>
         <UserTextBox />
         </body>
         </div>
