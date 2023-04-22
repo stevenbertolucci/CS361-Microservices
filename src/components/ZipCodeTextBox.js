@@ -22,7 +22,6 @@ function TextBox() {
             return false;
         }
         setUpdate(mycity);
-        //alert("The city is: " + JSON.stringify(mycity));
         event.preventDefault();
     };
 
@@ -38,7 +37,7 @@ function TextBox() {
                 </input>
                 <button className='App-submit' type = 'submit' onClick={handleClick}>Submit</button>
             </form>
-            <p> Zipcode: {JSON.stringify(updateZipcode.zipcode)}
+            <p className='App-p2'> Zipcode: {JSON.stringify(updateZipcode.zipcode)}
             <br />
             City: {JSON.stringify(updateZipcode.city)}
             <br />
@@ -49,7 +48,6 @@ function TextBox() {
             Latitudinal: {JSON.stringify(updateZipcode.latitude)}
             </p>
             </div>
-    
     );
 }
 

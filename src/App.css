@@ -55,6 +55,11 @@
 
 .App-p {
   font-size: medium;
+  position: static;
+}
+
+.App-p2 {
+  font-size: large;
 }
 
 .App-faq {
@@ -78,7 +83,7 @@
   width: fit-content;
   margin-left: auto;
   margin-right: auto;
-  position: sticky;
+  position: static;
 }
 
 .App-a {
@@ -118,6 +123,7 @@
   width: 100px;
   text-align: left;
   margin: 0px;
+  position: static;
 }
 
 .App-nav a {

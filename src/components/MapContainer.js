@@ -18,13 +18,13 @@ export const MapContainer = () => {
 
   
   const mapStyles = {        
-    height: "30vh",
+    height: "52vh",
     width: "100%"};
   
   
   return (
      <LoadScript
-       googleMapsApiKey='API-KEY'>
+       googleMapsApiKey='API KEY'>
         <GoogleMap
             mapContainerStyle={mapStyles}
             zoom={13}
