@@ -52,17 +52,17 @@ function TextBox() {
         setUpdateCity(city);
         setUpdateZipcode(zipcode);
         var table = document.getElementById("myTable");
-        var row = table.insertRow(0);
+        var row = table.insertRow(1);
         var cell1 = row.insertCell(0);
         var cell2 = row.insertCell(0);
         var cell3 = row.insertCell(0);
         var cell4 = row.insertCell(0);
         var cell5 = row.insertCell(0);
-        cell1.innerHTML = JSON.stringify(updateFirstName)
-        cell2.innerHTML = JSON.stringify(updateLastName)
+        cell1.innerHTML = JSON.stringify(updateZipcode)
+        cell2.innerHTML = JSON.stringify(updateCity)
         cell3.innerHTML = JSON.stringify(updateAddress)
-        cell4.innerHTML = JSON.stringify(updateCity)
-        cell5.innerHTML = JSON.stringify(updateZipcode)
+        cell4.innerHTML = JSON.stringify(updateLastName)
+        cell5.innerHTML = JSON.stringify(updateFirstName)
         event.preventDefault();
     };
 
@@ -120,13 +120,6 @@ function TextBox() {
                     <th>Address</th>
                     <th>City</th>
                     <th>Zipcode</th>
-                </tr>
-                <tr>
-                    <td>{JSON.stringify(firstName)}</td>
-                    <td>{JSON.stringify(lastName)}</td>
-                    <td>{JSON.stringify(address)}</td>
-                    <td>{JSON.stringify(city)}</td>
-                    <td>{JSON.stringify(zipcode)}</td>
                 </tr>
             </table>
             </div>
