@@ -24,7 +24,7 @@ export const MapContainer = () => {
   
   return (
      <LoadScript
-       googleMapsApiKey='AIzaSyBBxr-L1UfxO8HYXKNvf0LHEQMwZO95_7U'>
+       googleMapsApiKey='API KEY'>
         <GoogleMap
             mapContainerStyle={mapStyles}
             zoom={13}
