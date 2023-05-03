@@ -5,7 +5,7 @@ import LogOutButton from '../components/LogOutButton';
 function HomePage() {
     return (
         <body>
-            <h2 className='App-center'>Welcome to the Directory!</h2>
+            <h2 className='App-center'>Welcome to The Directory!</h2>
             <Navigation />
             <br />
         </body>
