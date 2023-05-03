@@ -7,6 +7,7 @@ import ZipCodeLocator from './pages/ZipCodeLocator';
 import UserInfo from './pages/UserInfo';
 import { useAuth0 } from '@auth0/auth0-react';
 import LogInPage from './pages/LogInPage';
+import LogoutButton from './components/LogOutButton';
 
 function App() {
 
@@ -35,10 +36,11 @@ function App() {
             <Route path="/users" element = {<UserInfo />}></Route>
             <Route path="/zip-code-locator" element = {<ZipCodeLocator />}></Route>
             <Route path="/help" element = {<Help />}></Route>
+            <Route path="/log-out" element = {<LogoutButton />}></Route>
           </Routes>
         </Router>
       </header>
-      <footer>&#169; 2023 Steven Bertolucci</footer>
+      <footer className='App-footer'>&#169; 2023 Steven Bertolucci</footer>
     </div>
   );
 }

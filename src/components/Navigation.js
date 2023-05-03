@@ -8,6 +8,7 @@ function Navigation() {
             <Link to="/users">Users</Link>
             <Link to="/zip-code-locator">Zip Code Locator</Link>
             <Link to="/help">Help</Link>
+            <Link to="/log-out">Log Out</Link>
         </nav>
     )
 }

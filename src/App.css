@@ -80,6 +80,10 @@
   font-size: large;
 }
 
+.App-h3 {
+  font-size: small;
+}
+
 .App-faq {
   font-size: medium;
   position: fixed;
@@ -88,6 +92,10 @@
   text-align: center;
   width: 100%;
   margin-bottom: 50px;
+}
+
+.App-footer {
+  font-size: medium;
 }
 
 .App-div {
@@ -191,4 +199,20 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   }
+
+.App-button {
+  background-color: #0fc9ee;
+  margin: 10px;
+}
+
+.App-button2 {
+  background-color: #f05e5e;
+  margin: 10px;
+}
+
+.App-p5 {
+  color: red;
+  margin: 0px;
+  font-size: medium;
+}
   

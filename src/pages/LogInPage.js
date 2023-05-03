@@ -7,7 +7,8 @@ function LogInPage() {
   return (
     <>
     <p>Please log in to authenticate before accessing The Directory.</p>
-    <button className="App-button2" onClick={() => loginWithRedirect()}>Log In</button>
+    <p className="App-p5">Tip: After clicking "Log In," choose "Continue with Google"</p>
+    <button className="App-button" onClick={() => loginWithRedirect()}>Log In</button>
     </>
   );
 }

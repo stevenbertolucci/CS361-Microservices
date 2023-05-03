@@ -7,7 +7,6 @@ function HomePage() {
         <body>
             <h2 className='App-center'>Welcome to the Directory!</h2>
             <Navigation />
-            <LogOutButton />
             <br />
         </body>
     )
