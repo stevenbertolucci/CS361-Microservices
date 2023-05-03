@@ -38,7 +38,7 @@ function App() {
           </Routes>
         </Router>
       </header>
-      <footer>&169; 2023 Steven Bertolucci</footer>
+      <footer>&#169; 2023 Steven Bertolucci</footer>
     </div>
   );
 }
