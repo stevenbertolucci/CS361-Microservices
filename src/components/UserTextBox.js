@@ -11,6 +11,12 @@ function TextBox() {
     const [updateAddress, setUpdateAddress] = useState(address);
     const [updateCity, setUpdateCity] = useState(city);
     const [updateZipcode, setUpdateZipcode] = useState(zipcode);
+    const [randomFirstName, setrandomFirst] = useState();
+    const [randomLastName, setrandomLast] = useState();
+    const [randomaddress, setrandomAddressNumber] = useState();
+    const [randomaddress2, setrandomAddressName] = useState();
+    const [randomcity, setrandomCity] = useState();
+    const [randomZipcode, setrandomZipcode] = useState();
 
 
     const handleChange = (event) => {
@@ -34,6 +40,42 @@ function TextBox() {
         setZipcode(event.target.value);
     };
 
+    const displayData = (data) => {
+        const personfname = firstName;
+        console.log(personfname);
+        const personlname = lastName;
+        console.log(personlname);
+        const personAddress = address;
+        console.log(personAddress);
+        const personCity = city;
+        console.log(personCity);
+        const personZip = zipcode;
+        console.log(personZip);
+        const div = document.createElement("div");
+        div.textContent = `${personfname} ${personlname} ${personAddress} 
+                            ${personCity} ${personZip}`;
+        document.getElementById("myTable").appendChild(div);
+    }
+
+    const displayRandom = (data) => {
+        const randomfname = randomFirstName;
+        console.log(randomfname);
+        const randomlname = randomLastName;
+        console.log(randomlname);
+        const randomAddress = randomaddress;
+        console.log(randomAddress);
+        const randomAddress2 = randomaddress2;
+        console.log(randomAddress);
+        const randomCity = randomcity;
+        console.log(randomCity);
+        const randomZip = randomZipcode;
+        console.log(randomZip);
+        const div = document.createElement("table");
+        div.textContent = `${randomfname} ${randomlname} ${randomAddress} ${randomAddress2}
+                            ${randomCity} ${randomZip}`;
+        document.getElementById("myTable").appendChild(div);
+    }
+
     const handleClick = (event) => {
         let a = firstName;
         let b = lastName;
@@ -51,20 +93,43 @@ function TextBox() {
         setUpdateAddress(address);
         setUpdateCity(city);
         setUpdateZipcode(zipcode);
-        var table = document.getElementById("myTable");
-        var row = table.insertRow(1);
-        var cell1 = row.insertCell(0);
-        var cell2 = row.insertCell(0);
-        var cell3 = row.insertCell(0);
-        var cell4 = row.insertCell(0);
-        var cell5 = row.insertCell(0);
-        cell1.innerHTML = JSON.stringify(updateZipcode)
-        cell2.innerHTML = JSON.stringify(updateCity)
-        cell3.innerHTML = JSON.stringify(updateAddress)
-        cell4.innerHTML = JSON.stringify(updateLastName)
-        cell5.innerHTML = JSON.stringify(updateFirstName)
+        displayData();
         event.preventDefault();
     };
+
+
+    // Call microservice without clicking button
+    const handleZip = async (event) => {
+        
+        const URL = 'http://localhost:4500/zipcode'
+        event.preventDefault();
+        const result = await fetch(URL)
+        const data = await result.json();
+        console.log(data);
+    }
+
+    // Call microservice without clicking button
+    const handleRandom = async (event) => {
+        
+        const URL = 'http://localhost:3001/random-person'
+        event.preventDefault();
+        const result = await fetch(URL)
+        const data = await result.json();
+        console.log(data.results[0].name.first);
+        console.log(data.results[0].name.last);
+        console.log(data.results[0].location.street.number);
+        console.log(data.results[0].location.street.name);
+        console.log(data.results[0].location.city);
+        console.log(data.results[0].location.postcode);
+        setrandomFirst(data.results[0].name.first)
+        setrandomLast(data.results[0].name.last)
+        setrandomAddressNumber(data.results[0].location.street.number)
+        setrandomAddressName(data.results[0].location.street.name)
+        setrandomCity(data.results[0].location.city)
+        setrandomZipcode(data.results[0].location.postcode)
+        // Display the response from random-person
+        displayRandom();
+    }
 
     return (
         <div>
@@ -111,7 +176,7 @@ function TextBox() {
                 <br />
                 <button className='App-submit' type = 'submit' onClick={handleClick}>Submit</button>
                 <p className='App-p4'>OR</p>
-                <button className='App-submit2' type = 'submit' onClick={handleClick}>Generate a Random User</button>
+                <button className='App-submit2' type = 'submit' onClick={handleRandom}>Generate a Random User</button>
             </form>
             <br />
             
