@@ -9,7 +9,7 @@ function UserInfo() {
             <h2 className='App-center'>User Log Book</h2>
             <Navigation />
             <br />
-            <p className='App-p'>Please use the text field to log a user: </p>
+            <p className='App-p'>Please use the text field to record your visitation: </p>
             <UserTextBox />
         </body>
     )
