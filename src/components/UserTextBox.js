@@ -180,7 +180,7 @@ function TextBox() {
                 <br />
                 <button className='App-submit' type = 'submit' onClick={handleClick}>Submit</button>
                 <p className='App-p4'>OR</p>
-                <button className='App-submit2' type = 'submit' onClick={handleZip}>Get Zip Code</button>
+                <button className='App-submit2' type = 'submit' onClick={handleRandom}>Get Random User</button>
             </form>
             <br />
             
