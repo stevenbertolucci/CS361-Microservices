@@ -70,9 +70,7 @@ function TextBox() {
             <br />
             State: {JSON.stringify(updateZipcode.state)}
             <br />
-            Longitudinal: {JSON.stringify(updateZipcode.longitude)}
-            <br />
-            Latitudinal: {JSON.stringify(updateZipcode.latitude)}
+            Coordinates: {JSON.stringify(updateZipcode.longitude)}, {JSON.stringify(updateZipcode.latitude)}
             <br />
             Current Time: {JSON.stringify(time.time)} 
             <br />
