@@ -13,7 +13,7 @@ const goToHomePage = () => {
 
   return (
     <div>
-    <p>Are you sure you want to Log Out, {user.name}? </p>
+    <p className="App-style">Are you sure you want to Log Out, {user.name}? </p>
     <button className="App-button" onClick={() => logout({ returnTo: window.location.origin })}>
       Yes, log me out
     </button>
