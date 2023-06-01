@@ -1,7 +1,6 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import ZipCodeTextBox from '../components/ZipCodeTextBox';
-import MapContainer from '../components/MapContainer';
 
 function zipcodeInfo() {
     return (
