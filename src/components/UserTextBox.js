@@ -40,42 +40,6 @@ function TextBox() {
         setZipcode(event.target.value);
     };
 
-    const displayData = (data) => {
-        const personfname = firstName;
-        console.log(personfname);
-        const personlname = lastName;
-        console.log(personlname);
-        const personAddress = address;
-        console.log(personAddress);
-        const personCity = city;
-        console.log(personCity);
-        const personZip = zipcode;
-        console.log(personZip);
-        const div = document.createElement("div");
-        div.textContent = `${personfname} ${personlname} ${personAddress} 
-                            ${personCity} ${personZip}`;
-        document.getElementById("myTable").appendChild(div);
-    }
-
-    const displayRandom = (data) => {
-        const randomfname = randomFirstName;
-        console.log(randomfname);
-        const randomlname = randomLastName;
-        console.log(randomlname);
-        const randomAddress = randomaddress;
-        console.log(randomAddress);
-        const randomAddress2 = randomaddress2;
-        console.log(randomAddress);
-        const randomCity = randomcity;
-        console.log(randomCity);
-        const randomZip = randomZipcode;
-        console.log(randomZip);
-        const div = document.createElement("table");
-        div.textContent = `${randomfname} ${randomlname} ${randomAddress} ${randomAddress2}
-                            ${randomCity} ${randomZip}`;
-        document.getElementById("myTable").appendChild(div);
-    }
-
     const handleClick = (event) => {
         let a = firstName;
         let b = lastName;
@@ -88,12 +52,32 @@ function TextBox() {
             return false;
         }
         event.preventDefault();
+        const x = document.createElement('tr');
+        const x1 = document.createElement('tr');
+        const x2 = document.createElement('tr');
+        const x3 = document.createElement('tr');
+        const x4 = document.createElement('tr');
+        x.textContent = `${firstName}`;
+        x1.textContent = `${lastName}`;
+        x2.textContent = `${address}`;
+        x3.textContent = `${city}`;
+        x4.textContent = `${zipcode}`;
+        const theData = document.getElementById('data1');
+        const theData1 = document.getElementById('data2');
+        const theData2 = document.getElementById('data3');
+        const theData3 = document.getElementById('data4');
+        const theData4 = document.getElementById('data5');
+        theData.appendChild(x);
+        theData1.appendChild(x1);
+        theData2.appendChild(x2);
+        theData3.appendChild(x3);
+        theData4.appendChild(x4);
+
         setUpdateFirst(firstName);
         setUpdateLast(lastName);
         setUpdateAddress(address);
         setUpdateCity(city);
         setUpdateZipcode(zipcode);
-        displayData();
         event.preventDefault();
     };
 
@@ -121,14 +105,34 @@ function TextBox() {
         console.log(data.results[0].location.street.name);
         console.log(data.results[0].location.city);
         console.log(data.results[0].location.postcode);
+        const p = document.createElement('tr');
+        const p1 = document.createElement('tr');
+        const p2 = document.createElement('tr');
+        const p3 = document.createElement('tr');
+        const p4 = document.createElement('tr');
+        p.textContent = `${data.results[0].name.first}`;
+        p1.textContent = `${data.results[0].name.last}`;
+        p2.textContent = `${data.results[0].location.street.number}` + ` ${data.results[0].location.street.name}`;
+        p3.textContent = `${data.results[0].location.city}`;
+        p4.textContent = `${data.results[0].location.postcode}`;
+
+        const xhrdata = document.getElementById('data1');
+        const xhrdata1 = document.getElementById('data2');
+        const xhrdata2 = document.getElementById('data3');
+        const xhrdata3 = document.getElementById('data4');
+        const xhrdata4 = document.getElementById('data5');
+        xhrdata.appendChild(p);
+        xhrdata1.appendChild(p1);
+        xhrdata2.appendChild(p2);
+        xhrdata3.appendChild(p3);
+        xhrdata4.appendChild(p4);
+
         setrandomFirst(data.results[0].name.first)
         setrandomLast(data.results[0].name.last)
         setrandomAddressNumber(data.results[0].location.street.number)
         setrandomAddressName(data.results[0].location.street.name)
         setrandomCity(data.results[0].location.city)
         setrandomZipcode(data.results[0].location.postcode)
-        // Display the response from random-person
-        displayRandom();
     }
 
     return (
@@ -176,7 +180,7 @@ function TextBox() {
                 <br />
                 <button className='App-submit' type = 'submit' onClick={handleClick}>Submit</button>
                 <p className='App-p4'>OR</p>
-                <button className='App-submit2' type = 'submit' onClick={handleRandom}>Generate a Random User</button>
+                <button className='App-submit2' type = 'submit' onClick={handleRandom}>Get Random User</button>
             </form>
             <br />
             
@@ -188,6 +192,12 @@ function TextBox() {
                     <th>City</th>
                     <th>Zipcode</th>
                 </tr>
+                <tr id = "data"></tr>
+                    <td id = "data1"></td>
+                    <td id = "data2"></td>
+                    <td id = "data3"></td>
+                    <td id = "data4"></td>
+                    <td id = "data5"></td>
             </table>
             </div>
     );
