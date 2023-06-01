@@ -1,9 +1,11 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
+import { GoogleMap, LoadScript, Marker} from '@react-google-maps/api';
 
 function TextBox() {
     const [zipcode, setZipcode] = useState('');
     const [updateZipcode, setUpdate] = useState(zipcode)
     const [time, setTime] = useState('');
+    const [currentPosition, setCurrentPosition ] = useState({});
     const cities = require('cities');
 
     const handleChange = (event) => {
@@ -34,7 +36,22 @@ function TextBox() {
         const data = await result.json();
         setTime(data);
         event.preventDefault();
-    };
+        const currentPosition = {
+            lat: parseFloat(`${mycity.latitude}`),
+            lng: parseFloat(`${mycity.longitude}`)
+          }
+          console.log(currentPosition)
+          setCurrentPosition(currentPosition);
+        };
+        
+        useEffect(() => {
+          navigator.geolocation.getCurrentPosition(handleClick);
+        })
+  
+    
+    const mapStyles = {        
+      height: "50vh",
+      width: "100%"};
 
     return (
         <div>
@@ -60,6 +77,22 @@ function TextBox() {
             Current Time: {JSON.stringify(time.time)} 
             <br />
             TimeZone: {JSON.stringify(time.timeZone)}
+            </p>
+            <p className='App-maps'>
+            <LoadScript
+                googleMapsApiKey='AIzaSyBBxr-L1UfxO8HYXKNvf0LHEQMwZO95_7U'>
+                <GoogleMap
+                    mapContainerStyle={mapStyles}
+                    zoom={13}
+                    center={currentPosition}>
+                {
+                    currentPosition.lat &&
+                    (
+                        <Marker position={currentPosition}></Marker>
+                    )
+                }
+                </GoogleMap>
+            </LoadScript>
             </p>
             </div>
     );

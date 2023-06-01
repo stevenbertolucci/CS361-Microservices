@@ -1,6 +1,5 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-import LogOutButton from '../components/LogOutButton';
 
 function HomePage() {
     return (
