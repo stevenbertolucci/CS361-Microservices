@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import HomePage from './pages/HomePage';
 import Help from './pages/Help';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
@@ -12,20 +12,6 @@ import LogoutButton from './components/LogOutButton';
 function App() {
 
   const {isAuthenticated} = useAuth0();
-
-  const [theme, setTheme] = useState('light');
-    const toggleTheme = () => {
-    if (theme === 'light') {
-        setTheme('dark');
-    } 
-    else {
-        setTheme('light');
-    }
-};
-
-  useEffect(() => {
-      document.body.className = theme;
-  }, [theme]);
   
   return (
     <div className="App">
